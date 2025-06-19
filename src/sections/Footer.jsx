@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { socialImgs } from "../constants";
 import {
   Mail,
   Phone,
@@ -84,26 +83,6 @@ const Footer = () => {
                   <span>Certified</span>
                 </div>
               </div>
-
-              {/* Social Links */}
-              {/*<div className="flex items-center gap-4">*/}
-              {/*  {socialImgs.map((social, index) => (*/}
-              {/*      <a*/}
-              {/*          key={index}*/}
-              {/*          href={social.link}*/}
-              {/*          target="_blank"*/}
-              {/*          rel="noopener noreferrer"*/}
-              {/*          className="w-10 h-10 bg-primary/10 dark:bg-white/10 rounded-full flex items-center justify-center hover:bg-primary hover:scale-110 dark:hover:bg-accent transition-all duration-200 group"*/}
-              {/*          aria-label={`Follow us on ${social.name}`}*/}
-              {/*      >*/}
-              {/*        <img*/}
-              {/*            src={social.imgPath}*/}
-              {/*            alt={`${social.name} icon`}*/}
-              {/*            className="w-5 h-5 opacity-70 group-hover:opacity-100 filter group-hover:brightness-0 group-hover:invert transition-all duration-200"*/}
-              {/*        />*/}
-              {/*      </a>*/}
-              {/*  ))}*/}
-              {/*</div>*/}
             </div>
 
             {/* Quick Links */}

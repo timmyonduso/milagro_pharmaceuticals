@@ -2,8 +2,6 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 import TitleHeader from "../components/TitleHeader";
-import ContactExperience from "../components/models/contact/ContactExperience";
-import {arrowDown, contactImg} from "../assets/index.js";
 
 const Contact = () => {
   const formRef = useRef(null);
@@ -121,7 +119,7 @@ const Contact = () => {
                         {loading ? "Connecting You to Care..." : "Request a Wellness Consultation"}
                       </p>
                       <div className="arrow-wrapper">
-                        <img src={arrowDown} alt="arrow" />
+                        <img src="/images/arrow-down.svg" alt="arrow" />
                       </div>
                     </div>
                   </button>
@@ -135,7 +133,7 @@ const Contact = () => {
                 <img
                     src="/images/contact.jpg"
                     alt="Wellness consultation visual"
-                    className="w-full object-cover rounded-3xl"
+                    className="w-full object-center object-cover rounded-3xl"
                 />
               </div>
             </div>

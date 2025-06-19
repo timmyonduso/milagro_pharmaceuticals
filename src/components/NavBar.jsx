@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { navLinks } from "../constants";
 import ThemeToggle from "./ThemeToggle";
-import { logo } from "../assets";
 import { Menu, X, Calendar, Phone } from "lucide-react";
 import { gsap } from "gsap";
 
@@ -73,7 +72,7 @@ const NavBar = () => {
             {/* Logo */}
             <a href="/" className="block relative -my-14 md:-my-16 z-50">
               <img
-                  src={logo}
+                  src="/images/logo.png"
                   alt="Milagro Pharmaceuticals Logo"
                   className={`w-auto object-contain filter dark:brightness-110 transition-all duration-300 ${
                       scrolled ? 'h-32 md:h-40' : 'h-52 md:h-60'
