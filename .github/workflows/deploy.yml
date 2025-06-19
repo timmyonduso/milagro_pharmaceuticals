@@ -1,4 +1,4 @@
-name: Deploy React Vite App to ScalaHosting
+name: Deploy Milagro Pharmaceuticals App to ScalaHosting
 
 on:
   push:

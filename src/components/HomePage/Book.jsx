@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import IntroComponent from "./IntroComponent.jsx";
 
 function Book() {
     const [expandedIndex, setExpandedIndex] = useState(0);
@@ -53,8 +52,6 @@ function Book() {
 
     return (
         <>
-            <IntroComponent />
-
             <main id="products" className="w-screen h-screen bg-black overflow-hidden">
                 <div className="h-full w-full overflow-hidden flex items-center justify-center p-4 relative"
                      style={{
