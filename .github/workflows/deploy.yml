@@ -21,7 +21,7 @@ jobs:
         run: npm ci
 
       - name: Build Vite app
-        run: npm run build
+        run: yarn build
 
       - name: Zip the contents of dist/
         run: |
