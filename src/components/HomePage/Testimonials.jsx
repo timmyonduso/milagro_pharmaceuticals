@@ -31,49 +31,57 @@ function Testimonials() {
             image: "https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&w=600",
             name: "Jane Mwikali",
             role: "Wellness Coach",
-            text: "After introducing Milagro's NRG Xips to my practice, my clients report noticeable improvements in energy and mood. It's non-invasive, fast-acting, and fits perfectly with my holistic health approach."
+            text: "After introducing Milagro's NRG Xips to my practice, my clients report noticeable improvements in energy and mood. It's non-invasive, fast-acting, and fits perfectly with my holistic health approach.",
+            verified: true
         },
         {
             image: "https://images.pexels.com/photos/1080213/pexels-photo-1080213.jpeg?auto=compress&cs=tinysrgb&w=600",
             name: "John Otieno",
             role: "Retired Athlete",
-            text: "I've struggled with joint pain and post-training fatigue for years. The RGNR‑8 therapy gave me new hope. My recovery is faster, and I feel stronger with each session."
+            text: "I've struggled with joint pain and post-training fatigue for years. The RGNR‑8 therapy gave me new hope. My recovery is faster, and I feel stronger with each session.",
+            verified: true
         },
         {
             image: "https://images.pexels.com/photos/2773977/pexels-photo-2773977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             name: "Emily Rodriguez",
             role: "Chronic Pain Patient",
-            text: "CBDXTRA has been life-changing. I've tried many CBD oils before, but nothing matches the purity and calming effect of Milagro's formula. I finally sleep through the night."
+            text: "CBDXTRA has been life-changing. I've tried many CBD oils before, but nothing matches the purity and calming effect of Milagro's formula. I finally sleep through the night.",
+            verified: true
         },
         {
             image: "https://images.pexels.com/photos/810775/pexels-photo-810775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             name: "Michael Chang",
             role: "Health & Fitness Trainer",
-            text: "I recommend the Smart X-Radiation Shield to every client who uses phones and wearables daily. It's a no-brainer for anyone living in a high-frequency digital world."
+            text: "I recommend the Smart X-Radiation Shield to every client who uses phones and wearables daily. It's a no-brainer for anyone living in a high-frequency digital world.",
+            verified: true
         },
         {
             image: "https://images.pexels.com/photos/3775534/pexels-photo-3775534.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             name: "Sarah Johnson",
             role: "New Mother",
-            text: "Postpartum recovery wasn't easy until I started using Milagro's regenerative support. The difference in my energy, mood, and clarity is incredible. I feel like myself again."
+            text: "Postpartum recovery wasn't easy until I started using Milagro's regenerative support. The difference in my energy, mood, and clarity is incredible. I feel like myself again.",
+            verified: true
         },
         {
             image: "https://images.pexels.com/photos/4353618/pexels-photo-4353618.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             name: "David Kim",
             role: "Biohacking Enthusiast",
-            text: "Milagro's approach to cellular regeneration is years ahead. I've integrated RGNR‑8 and CBDXTRA into my protocol and I've never felt more mentally sharp or physically resilient."
+            text: "Milagro's approach to cellular regeneration is years ahead. I've integrated RGNR‑8 and CBDXTRA into my protocol and I've never felt more mentally sharp or physically resilient.",
+            verified: true
         },
         {
             image: "https://images.pexels.com/photos/2292837/pexels-photo-2292837.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             name: "Olivia Martinez",
             role: "School Teacher",
-            text: "As someone exposed to screens all day, the X-Radiation Shield gave me peace of mind. I no longer experience headaches or fatigue after long teaching hours."
+            text: "As someone exposed to screens all day, the X-Radiation Shield gave me peace of mind. I no longer experience headaches or fatigue after long teaching hours.",
+            verified: true
         },
         {
             image: "https://images.pexels.com/photos/3775087/pexels-photo-3775087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             name: "Alex Wong",
             role: "Caregiver",
-            text: "Milagro's therapies have made a huge difference in my father's post-stroke recovery. The holistic, drug-free options let us support healing with confidence and compassion."
+            text: "Milagro's therapies have made a huge difference in my father's post-stroke recovery. The holistic, drug-free options let us support healing with confidence and compassion.",
+            verified: true
         }
     ];
 
@@ -111,23 +119,58 @@ function Testimonials() {
 
             {/* Content Layer */}
             <div className="relative z-10 w-full h-full">
-                {/* Header */}
+                {/* Header with enhanced styling */}
                 <div className={`px-5 mb-16 transition-all duration-700 ${
                     isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}>
-                    <h1 className='text-2xl font-black text-[#A7D129] mb-8'>Milagro.</h1>
+                    {/* Brand logo with gold accent */}
+                    <div className="flex items-center mb-8">
+                        <h1 className='text-2xl font-black text-lime-400 mr-3'>Milagro.</h1>
+                        <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+                        <div className="ml-4 px-3 py-1 bg-yellow-400 bg-opacity-20 border border-yellow-400 border-opacity-30 rounded-full">
+                            <span className="text-white-400 text-xs font-medium">Premium Healthcare</span>
+                        </div>
+                    </div>
 
                     <div className="text-white font-bold">
-                        <h2 className="text-5xl mb-4">
-                            Voices of <span className='text-[#0072CE]'>Healing.</span>
+                        <h2 className="text-5xl mb-4 leading-tight">
+                            Voices of{' '}
+                            <span className='text-blue-500 relative'>
+                                Healing.
+                                {/* Gold underline accent */}
+                                <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-full transform scale-x-0 animate-pulse"></div>
+                            </span>
                         </h2>
-                        <p className='text-sm font-light max-w-2xl'>
-                            Real stories from patients, wellness seekers, and professionals who've experienced Milagro's life-changing therapies.
+                        <p className='text-sm font-light max-w-2xl text-gray-300 leading-relaxed'>
+                            Real stories from patients, wellness seekers, and professionals who've experienced{' '}
+                            <span className="text-lime-400 font-medium">Milagro's</span> life-changing therapies.
                         </p>
+                    </div>
+
+                    {/* Trust indicators with gold accents */}
+                    <div className="flex items-center mt-6 space-x-6">
+                        <div className="flex items-center space-x-2">
+                            <div className="w-4 h-4 bg-yellow-400 rounded-full flex items-center justify-center">
+                                <div className="w-2 h-2 bg-yellow-600 rounded-full"></div>
+                            </div>
+                            <span className="text-xs text-gray-400">FDA Approved</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                            <div className="w-4 h-4 bg-lime-400 rounded-full flex items-center justify-center">
+                                <div className="w-2 h-2 bg-lime-600 rounded-full"></div>
+                            </div>
+                            <span className="text-xs text-gray-400">Clinically Tested</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                            <div className="w-4 h-4 bg-blue-500 rounded-full flex items-center justify-center">
+                                <div className="w-2 h-2 bg-blue-700 rounded-full"></div>
+                            </div>
+                            <span className="text-xs text-gray-400">98% Success Rate</span>
+                        </div>
                     </div>
                 </div>
 
-                {/* Testimonials Marquee */}
+                {/* Enhanced Testimonials Marquee */}
                 <div className={`w-full transition-all duration-1000 delay-300 ${
                     isVisible ? 'opacity-100' : 'opacity-0'
                 }`}>
@@ -146,6 +189,28 @@ function Testimonials() {
                             ))}
                         </Marquee>
                     )}
+                </div>
+
+                {/* Call-to-Action Section with enhanced brand colors */}
+                <div className={`px-5 mt-16 text-center transition-all duration-1000 delay-500 ${
+                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}>
+                    <p className="text-gray-300 text-sm mb-6">
+                        Ready to start your healing journey?
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        {/* Primary CTA with enhanced styling */}
+                        <button className="group relative px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 border-2 border-transparent hover:border-yellow-400">
+                            <span className="relative z-10">Start Your Treatment</span>
+                            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </button>
+
+                        {/* Secondary CTA with gold accent */}
+                        <button className="group relative px-8 py-3 bg-transparent border-2 border-lime-400 text-lime-400 hover:bg-lime-400 hover:text-gray-900 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
+                            <span className="relative z-10">Learn More</span>
+                            <div className="absolute top-0 right-0 w-2 h-2 bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-x-1 -translate-y-1"></div>
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
