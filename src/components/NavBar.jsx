@@ -101,38 +101,45 @@ const NavBar = () => {
 
             {/* Right Side: Actions */}
             <div className="flex items-center gap-4">
-              {/* Book Appointment Button - Desktop */}
+              {/* Premium Book Appointment Button */}
               <a
                   href="/book-appointment"
-                  className={`hidden lg:inline-flex items-center gap-2 bg-primary hover:bg-primary-dark dark:bg-accent dark:hover:bg-accent/80 px-4 py-2.5 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] ${
-                      scrolled ? 'text-black' : 'text-white dark:text-primary-dark'
-                  }`}
+                  className="hidden lg:inline-flex items-center gap-2 relative overflow-hidden bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-101 active:scale-95 border border-yellow-400/30 hover:border-yellow-400/50 group ml-3"
               >
-                <Calendar size={18} />
-                <span>Book Appointment</span>
+                {/* Gold shimmer effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                <Calendar size={18} className="relative z-10" />
+                <span className="relative z-10">Book Appointment</span>
               </a>
 
-              {/* Contact Button - Desktop */}
+              {/* Premium Contact Button */}
               <a
                   href="/contact"
-                  className="hidden lg:inline-flex items-center gap-2 border-2 border-primary dark:border-accent text-primary dark:text-accent hover:bg-primary hover:text-white dark:hover:bg-accent dark:hover:text-primary-dark px-4 py-2.5 rounded-lg font-medium transition-all duration-200 hover:shadow-md"
+                  className="hidden lg:inline-flex items-center gap-2 relative overflow-hidden border-2 border-green-400 bg-green-400/10 hover:bg-green-400 text-green-600 hover:text-white dark:text-green-400 dark:hover:text-slate-900 px-5 py-2.5 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:scale-105 active:scale-95 hover:border-yellow-400 group"
               >
-                <Phone size={18} />
-                <span>Contact</span>
+                {/* Gold accent on hover */}
+                <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/0 to-yellow-400/20 scale-0 group-hover:scale-100 transition-transform duration-200"></div>
+                <Phone size={18} className="relative z-10" />
+                <span className="relative z-10">Contact</span>
               </a>
 
-              {/* Theme Toggle */}
-              <div className="hidden lg:block">
-                <ThemeToggle />
-              </div>
+              {/* Enhanced Theme Toggle */}
+              {/*<div className="hidden lg:block relative">*/}
+              {/*  <div className="absolute inset-0 bg-yellow-400/20 rounded-lg blur-sm opacity-0 hover:opacity-100 transition-opacity duration-300"></div>*/}
+              {/*  <ThemeToggle />*/}
+              {/*</div>*/}
 
-              {/* Mobile Menu Button */}
+              {/* Premium Mobile Menu Button */}
               <button
                   onClick={toggleMenu}
                   aria-label={menuOpen ? "Close menu" : "Open menu"}
-                  className="lg:hidden p-2.5 bg-primary hover:bg-primary-dark dark:bg-accent dark:hover:bg-accent/80 text-white rounded-lg backdrop-blur transition-all duration-200 hover:scale-110 active:scale-95 z-50"
+                  className="lg:hidden relative overflow-hidden p-3 bg-gradient-to-br from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 active:scale-95 z-50 border border-yellow-400/30 group"
               >
-                {menuOpen ? <X size={24} /> : <Menu size={24} />}
+                {/* Gold shimmer on mobile button */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
+                <div className="relative z-10">
+                  {menuOpen ? <X size={24} /> : <Menu size={24} />}
+                </div>
               </button>
             </div>
           </div>
@@ -192,9 +199,9 @@ const NavBar = () => {
               </a>
 
               {/* Theme Toggle in Mobile Menu */}
-              <div className="flex justify-center mt-4">
-                <ThemeToggle />
-              </div>
+              {/*<div className="flex justify-center mt-4">*/}
+              {/*  <ThemeToggle />*/}
+              {/*</div>*/}
             </div>
           </nav>
 

@@ -333,7 +333,7 @@ const Hero = () => {
                     }}
                     className="group cursor-pointer relative px-8 py-4 bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-400 hover:to-yellow-500 text-slate-900 font-semibold rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-yellow-400/30 focus:outline-none focus:ring-4 focus:ring-yellow-300/50"
                 >
-                <span className="relative z-10 flex items-center gap-2">
+                <span className="relative z-10 flex items-center gap-2 text-white">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
@@ -350,7 +350,7 @@ const Hero = () => {
                     }}
                     className="group cursor-pointer relative px-8 py-4 bg-transparent border-2 border-yellow-400 hover:bg-yellow-400 text-yellow-400 hover:text-slate-900 font-semibold rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-yellow-400/20 focus:outline-none focus:ring-4 focus:ring-yellow-300/50"
                 >
-                  <span className="relative z-10">{currentContent.secondaryButton}</span>
+                  <span className="relative z-10 text-white">{currentContent.secondaryButton}</span>
                 </button>
               </div>
 
