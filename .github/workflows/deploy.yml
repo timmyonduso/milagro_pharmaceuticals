@@ -1,0 +1,55 @@
+name: Deploy Milagro Pharmaceuticals App to ScalaHosting
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Build Vite app
+        run: yarn build
+
+      - name: Zip the contents of dist/
+        run: |
+          cd dist
+          zip -r ../deploy.zip ./*
+
+      - name: Upload zip to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 6543
+          source: "deploy.zip"
+          target: "/home/eispositivecom/"
+
+      - name: SSH into server and deploy
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 6543
+          script: |
+            cd /home/eispositivecom/
+            cp milagro.eispositive.com/.htaccess /tmp/.htaccess.bak || true
+            rm -rf milagro.eispositive.com/*
+            unzip -o deploy.zip -d milagro.eispositive.com
+            mv /tmp/.htaccess.bak milagro.eispositive.com/.htaccess || true
+            rm deploy.zip
+            echo "✅✅ Deployment complete"

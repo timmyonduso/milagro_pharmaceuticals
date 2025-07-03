@@ -1,0 +1,153 @@
+/* Enhanced CSS for cinematic effects and performance optimization */
+
+/* Performance optimizations for smooth animations */
+.cinematic-element {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Loading animation for three-body loader */
+.three-body {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.three-body__dot {
+  position: absolute;
+  top: 32px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.three-body__dot:nth-child(1) {
+  left: 8px;
+  animation: three-body1 0.6s infinite;
+}
+
+.three-body__dot:nth-child(2) {
+  left: 8px;
+  animation: three-body2 0.6s infinite;
+}
+
+.three-body__dot:nth-child(3) {
+  left: 32px;
+  animation: three-body2 0.6s infinite;
+}
+
+@keyframes three-body1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes three-body2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+/* Cinematic text effects */
+.special-font {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.hero-heading {
+  background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+/* Enhanced clip-path utilities */
+.mask-clip-path {
+  clip-path: polygon(14% 0, 72% 0, 88% 90%, 0 95%);
+}
+
+/* Absolute center utility */
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Flex center utility */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Cinematic glow effects */
+.cinematic-glow {
+  box-shadow: 0 0 20px rgba(255, 212, 0, 0.3), 0 0 40px rgba(255, 212, 0, 0.2), 0 0 80px rgba(255, 212, 0, 0.1);
+}
+
+.cinematic-glow-hover:hover {
+  box-shadow: 0 0 30px rgba(255, 212, 0, 0.4), 0 0 60px rgba(255, 212, 0, 0.3), 0 0 120px rgba(255, 212, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Smooth transitions for all interactive elements */
+button,
+.interactive {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced backdrop blur for modern browsers */
+.backdrop-blur-enhanced {
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+}
+
+/* Cinematic border gradients */
+.border-cinematic {
+  border: 2px solid;
+  border-image: linear-gradient(45deg, #fbbf24, #f59e0b, #d97706) 1;
+}
+
+/* Performance hint for GPU acceleration */
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+
+  .cinematic-glow {
+    box-shadow: 0 0 10px rgba(255, 212, 0, 0.2), 0 0 20px rgba(255, 212, 0, 0.1);
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
