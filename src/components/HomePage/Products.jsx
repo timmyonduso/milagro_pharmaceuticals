@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function Book() {
+function Products() {
     const [expandedIndex, setExpandedIndex] = useState(0);
     const [modalOpen, setModalOpen] = useState(false);
     const [selectedProduct, setSelectedProduct] = useState(null);
@@ -245,4 +245,4 @@ function Book() {
     )
 }
 
-export default Book
+export default Products

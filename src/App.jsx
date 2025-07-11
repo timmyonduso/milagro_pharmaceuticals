@@ -4,6 +4,7 @@ import Layout from "./components/Layout";
 import HomePage from "./pages/HomePage";
 import ContactPage from "./pages/ContactPage";
 import AboutPage from "./pages/AboutPage.jsx";
+import ProductsPage from "./pages/ProductsPage.jsx";
 
 const App = () => (
   <>
@@ -19,6 +20,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/products" element={<ProductsPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </Layout>

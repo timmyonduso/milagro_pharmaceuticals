@@ -125,7 +125,7 @@ const AboutHero = () => {
     return (
         <div
             ref={heroRef}
-            className="relative min-h-screen pt-[80px] md:pt-80px] px-10 bg-gradient-to-br from-white via-slate-50 to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 overflow-hidden"
+            className="relative min-h-screen pt-[80px] md:pt-[80px] px-10 bg-gradient-to-br from-white via-slate-50 to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 overflow-hidden"
         >
             {/* Top gradient for navbar contrast */}
             <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-slate-900/70 via-slate-900/30 to-transparent dark:from-slate-900/90 dark:via-slate-900/50 dark:to-transparent z-5" />
